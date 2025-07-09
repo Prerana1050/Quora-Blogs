@@ -30,6 +30,11 @@ let posts=[
         content:"i got an internship!",
     }
 ];
+
+app.get("/", (req, res) => {
+    res.redirect("/posts");
+});
+
 app.get("/posts",(req,res)=>{//basic API created
     res.render("index.ejs",{posts});
 })
